@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+char charType;
+int integerType;
+long int Lint;
+long long int Llint;
+float Float;
+
+int main(void)
+{
+ 
+  printf("Size of int: %ld bytes\n",sizeof(charType));
+  printf("Size of int: %ld bytes\n",sizeof(integerType));
+  printf("Size of int: %ld bytes\n",sizeof(Lint));
+  printf("Size of int: %ld bytes\n",sizeof(Llint));
+  printf("Size of int: %ld bytes\n",sizeof(Float));
+  return (0);
+}
