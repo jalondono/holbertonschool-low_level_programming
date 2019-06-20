@@ -7,13 +7,15 @@
  */
 int main(void)
 {
-char a = '0';
+int a = 0;
+int aprima;
 int b;
 int c;
-for (a = '0'; a <= '9'; a++)
+for (a = 0; a <= 9; a++)
 {
-putchar (a);
-if (a != '9')
+aprima = a + '0';
+putchar (aprima);
+if (a != 9)
 {
 for (b = 0; b < 1 ; b++)
 {
