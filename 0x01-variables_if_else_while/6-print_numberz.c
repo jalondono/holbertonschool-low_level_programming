@@ -3,7 +3,7 @@
 #include <time.h>
 /**
   * main - prueba 6
-  * Return - 0
+  * Return: always 0
   */
 int main(void)
 {
@@ -12,6 +12,6 @@ for (i = '0'; i <= '9' ; i++)
 {
 putchar (i);
 }
-putchar ('\n');
+putchar('\n');
 return (0);
 }
