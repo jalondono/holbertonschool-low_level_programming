@@ -19,9 +19,9 @@ aprima = a + '0';
 for (b = 0; b <= 9 ; b++)
 {
 bprima = b + '0';
-for (c= 0 ; c <= 9; c++)
+for (c = 0 ; c <= 9; c++)
 {
-cprima = c +'0';
+cprima = c + '0';
 if (a == b || b == c || a > b || b > c)
 {
 }
