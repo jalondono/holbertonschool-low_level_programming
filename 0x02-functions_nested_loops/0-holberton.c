@@ -10,7 +10,7 @@ int i;
 int tamano;
 char cadena[] = "Holberton";
 tamano = sizeof(cadena) / sizeof(char);
-for (i = 0; i < tamano-1; i++)
+for (i = 0; i < tamano - 1; i++)
 {
 _putchar(cadena[i]);
 }
