@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ * times_table - check the code for Holberton School students.
  *
  * Return: Always 0.
  */
@@ -20,13 +20,14 @@ sec = (i * j) % 10;
 if (fir == 0)
 {
 _putchar(sec + '0');
-} 
+}
 else
 {
 _putchar(fir + '0');
 _putchar(sec + '0');
 }
-if (j != 9){ 
+if (j != 9)
+{
 _putchar(',');
 _putchar(' ');
 }

@@ -1,7 +1,8 @@
 #include "holberton.h"
 /**
-  * main - printing if a char is lower or not 
-  * Retur : 1 if char is lower 0 if doesn't lower
+  * _islower - printing if a char is lower or not
+  * @c : return if is lower o not
+  * Return: 1 if char is lower 0 if doesn't lower
   */
 int _islower(int c)
 {
@@ -13,5 +14,5 @@ else
 {
 c = 0;
 }
-return c;
+return (c);
 }
