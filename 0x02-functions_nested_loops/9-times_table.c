@@ -19,6 +19,7 @@ fir = (i * j) / 10;
 sec = (i * j) % 10;
 if (fir == 0)
 {
+_putchar(' ');
 _putchar(sec + '0');
 }
 else
