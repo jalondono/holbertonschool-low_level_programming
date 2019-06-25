@@ -8,9 +8,10 @@ int main(void)
 {
 int i;
 int tamano;
-char cadena[]="Holberton";
-tamano =  sizeof(cadena)/sizeof(char);
-for(i=0;i<tamano;i++){
+char cadena[] = "Holberton";
+tamano = sizeof(cadena) / sizeof(char);
+for (i = 0; i < tamano; i++)
+{
 _putchar(cadena[i]);
 }
 _putchar('\n');
