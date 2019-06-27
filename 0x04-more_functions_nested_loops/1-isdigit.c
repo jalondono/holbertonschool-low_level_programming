@@ -2,14 +2,14 @@
 /**
  *_isdigit - program thisgs
  *Result: always return 0
- *@c
+ *@c: variable de entrada
  *Return: value depending on function
  */
 
 int _isdigit(int c)
 {
 int a;
-if(c >= 48 && c <= 57)
+if (c >= 48 && c <= 57)
 {
 a = 1;
 }
