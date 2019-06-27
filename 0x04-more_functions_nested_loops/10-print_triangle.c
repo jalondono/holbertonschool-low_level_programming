@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "holberton.h"
 /**
 *print_triangle - programs things
 *@size: valor de entrada
@@ -9,21 +9,19 @@ void print_triangle(int size)
 {
 int i;
 int j;
- int size = 10;
 for (i = 0; i <= size; i++)
 {
 for (j = 0; j < size; j++)
 {
 if (j < (size - i))
 {
-printf(" ");
+_putchar(' ');
 }
 else
 {
-printf("#");
+_putchar('#');
 }
 }
-printf("\n");
+_putchar('\n');
 }
-return 0;
 }
