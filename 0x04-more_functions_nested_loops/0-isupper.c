@@ -1,9 +1,9 @@
 #include "holberton.h"
-
 /**
- * _isupper - main principal
- * @c: variable de entrada
- * Return : devuelve un entero
+*_isupper - programs things
+*Result: always returns 0
+*@c : character determined by function
+*Return: value depending on function
  */
 
 int _isupper(int c)
