@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-*print_most_number - programs things
+*print_most_numbers - programs things
 *Result: always returns 0
 *Return: value depending on function
  */
