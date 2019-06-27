@@ -2,7 +2,7 @@
 
 /**
  * _isupper - main principal
- * @c : variable de entrada
+ * @c: variable de entrada
  * Return : devuelve un entero
  */
 
