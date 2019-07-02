@@ -13,14 +13,14 @@ void rev_string(char *s)
 	int k;
 	char copia[10];
 
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 	{
 		copia[i] = s[i];
 		i++;
 	}
 	k = i - 1;
 
-	for(j = k; j >= 0; j--)
+	for (j = k; j >= 0; j--)
 	{
 		a = (k - j);
 		s[a] = copia[j];
