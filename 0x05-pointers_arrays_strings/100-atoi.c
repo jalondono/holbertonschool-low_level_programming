@@ -13,6 +13,7 @@ int _atoi(char *s)
 	int resultado = 0;
 	int c = 1;
 	int signoaux = 1;
+	unsigned int resultaux = 0;
 
 	while (s[j] != '\0' && c == 1)
 	{
@@ -31,7 +32,8 @@ int _atoi(char *s)
 	{
 		if (s[i] >= 48 && s[i] <= 57)
 		{
-			resultado = resultado * 10 + (s[i] - '0');
+			resultaux = resultaux * 10 + (s[i] - '0');
+			resultado = resultaux;
 		}
 	}
 	return (signe * resultado);
