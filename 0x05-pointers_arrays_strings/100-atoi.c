@@ -33,8 +33,8 @@ int _atoi(char *s)
 		if (s[i] >= 48 && s[i] <= 57)
 		{
 			resultaux = resultaux * 10 + (s[i] - '0');
-			resultado = resultaux;
 		}
 	}
+	resultado = resultaux;
 	return (signe * resultado);
 }
