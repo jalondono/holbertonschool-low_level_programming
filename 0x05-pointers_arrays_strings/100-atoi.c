@@ -12,6 +12,7 @@ int _atoi(char *s)
 	int i = 0;
 	int resultado = 0;
 	int c = 1;
+	int signoaux = 1;
 
 	while (s[j] != '\0' && c == 1)
 	{
@@ -19,18 +20,15 @@ int _atoi(char *s)
 		{
 			c = 0;
 		}
+		if (s[j] == '-')
+		{
+			signoaux = -1;
+			signe = signe * signoaux;
+		}
 		j++;
 	}
 	for (i = 0; i < j ; i++)
 	{
-		if ((s[i] == '-') && (s[i + 1] >= 48 && s[i + 1] <= 57))
-		{
-			signe = -1;
-		}
-		if ((s[i] == '+') && (s[i + 1] >= 48 && s[i + 1] <= 57))
-		{
-			signe = 1;
-		}
 		if (s[i] >= 48 && s[i] <= 57)
 		{
 			resultado = resultado * 10 + (s[i] - '0');
