@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- *strcpy - program thisgs
+ *_strcpy - program thisgs
  *Result: always return 0
  *@dest: variable de entrada
  *@src: entrada source
@@ -16,5 +16,5 @@ char *_strcpy(char *dest, char *src)
 		i++;
 	}
 	dest[i] = '\0';
-	return(dest);
+	return (dest);
 }
