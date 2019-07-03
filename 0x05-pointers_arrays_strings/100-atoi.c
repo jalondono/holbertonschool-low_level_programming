@@ -35,6 +35,6 @@ int _atoi(char *s)
 			resultaux = resultaux * 10 + (s[i] - '0');
 		}
 	}
-	resultado = resultaux;
-	return (signe * resultado);
+	resultado = resultaux * sirge;
+	return (resultado);
 }
