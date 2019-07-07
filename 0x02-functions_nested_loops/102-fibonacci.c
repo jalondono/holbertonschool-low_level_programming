@@ -12,7 +12,7 @@ int main(void)
 	long fibo;
 	int i = 0;
 
-	while (i < 48)
+	while (i < 50)
 	{
 		if (i == 0)
 		{
