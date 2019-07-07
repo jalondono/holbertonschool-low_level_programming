@@ -16,15 +16,23 @@ int main(void)
 	{
 		if (i == 0)
 		{
-			printf("%d\n%d\n", 1, 2);
+			printf("%d, %d, ", 1, 2);
 			fibo = a + b;
-			printf("%ld\n", fibo);
+			printf("%ld, ", fibo);
 		}
 		aux = fibo;
 		fibo = fibo + b;
-		printf("%ld\n", fibo);
+		if(i != 47)
+		{
+			printf("%ld, ", fibo);
+		}
+		else
+		{
+			printf("%ld", fibo);
+		}
 		b = aux;
 		i++;
 	}
+	printf("\n");
 	return (0);
 }
