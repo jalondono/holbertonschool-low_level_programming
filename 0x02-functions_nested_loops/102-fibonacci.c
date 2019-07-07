@@ -12,7 +12,7 @@ int main(void)
 	long fibo;
 	int i = 0;
 
-	while (i < 46)
+	while (i < 47)
 	{
 		if (i == 0)
 		{
@@ -22,7 +22,7 @@ int main(void)
 		}
 		aux = fibo;
 		fibo = fibo + b;
-		if (i != 45)
+		if (i != 46)
 		{
 			printf("%ld, ", fibo);
 		}
