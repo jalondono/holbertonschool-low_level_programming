@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-*_strspn - program thisgs
+*_strpbrk - program thisgs
 *Result: always return 0
 *@s: variable de entrada
 *@accept: variable in
@@ -9,7 +9,7 @@
 char *_strpbrk(char *s, char *accept)
 
 {
-	int i ;
+	int i = 0;
 	int j = 0;
 	int k = 0;
 
