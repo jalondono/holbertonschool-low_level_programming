@@ -6,10 +6,10 @@
 *@accept: variable in
 *Return: value depending on function
 */
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 
 {
-	int i = 0;
+	int i ;
 	int j = 0;
 	int k = 0;
 
@@ -25,7 +25,7 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		if (j == 1)
 		{
-			return (s + a);
+			return (s + i);
 		}
 	}
 	return ('\0');
