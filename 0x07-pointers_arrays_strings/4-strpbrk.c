@@ -1,40 +1,32 @@
 #include "holberton.h"
 /**
- *_strpbrk - program thisgs
- *Result: always return 0
- *@s: variable de entrada
- *@accept: entrada source
- *Return: value depending on function
- */
-char *_strpbrk(char *s, char *accept)
-{
-	int j = 0;
-	int c = 1;
+*_strspn - program thisgs
+*Result: always return 0
+*@s: variable de entrada
+*@accept: variable in
+*Return: value depending on function
+*/
+unsigned int _strspn(char *s, char *accept)
 
-	while (*s != '\0'  && c == 1)
+{
+	int i = 0;
+	int j = 0;
+	int k = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; accept[j] != '\0'; j++)
+		j = 0;
+		for (k = 0; accept[k] != '\0'; k++)
 		{
-			if (*s == accept[j])
+			if (s[i] == accept[k])
 			{
-				c = 0;
-				break;
+				j = 1;
 			}
 		}
-		if (c == 0)
+		if (j == 1)
 		{
-			return('\0');
-			break;
+			return (s + a);
 		}
-		s++;
 	}
-	if (c != 0)
-	{
-		return (s);
-	}
-	else
-	{
-		return ('\0');
-	}
-
+	return ('\0');
 }
