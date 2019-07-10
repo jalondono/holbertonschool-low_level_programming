@@ -20,10 +20,10 @@ char *_strstr(char *haystack, char *needle)
 			{
 				return ((haystack + i) - (j - 1));
 			}
-				else
-				{
-					j = 0;
-				}
+		}
+		else
+		{
+			j = 0;
 		}
 		i++;
 	}
