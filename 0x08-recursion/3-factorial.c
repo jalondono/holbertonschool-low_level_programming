@@ -1,7 +1,19 @@
 #include "holberton.h"
 /**
- *print_chessboard - program thisgs
+ *factorial - return the result of factorial n number
  *Result: always return 0
- *@a: variable de entrada
- *Return: value depending on function
+ *@n: number of factorial
+ *Return: value of factorial
  */
+int factorial(int n)
+{
+	if (n < 0)
+	{
+		return (-1);
+	}
+	if (n == 0)
+	{
+		return (1);
+	}
+	return (n * factorial(n - 1));
+}
