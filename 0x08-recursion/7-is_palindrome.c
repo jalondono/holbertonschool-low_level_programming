@@ -27,9 +27,12 @@ int palindrome_aux(int up, int down, char *s)
 		return (0);
 
 	if (s[up] == s[down])
-		return (1);
+	{
+		if (down < up)
+			return (1);
+	}
 
-	return (palindrome_aux(up + 1, down - 1, s + 1));
+	return (palindrome_aux(up + 1, down - 1, s));
 }
 /**
  *is_palindrome - says if a string is palindrome or no
