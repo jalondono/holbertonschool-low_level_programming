@@ -39,6 +39,8 @@ int palindrome_aux(int up, int down, char *s)
  */
 int is_palindrome(char *s)
 {
+	if( _strlen_recursion(s)  == 1)
+		return (0);
 	if (*s == '\0')
 		return (0);
 
