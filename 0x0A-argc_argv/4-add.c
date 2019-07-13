@@ -13,9 +13,10 @@ int main(int argc, char *argv[])
 	int j = 0;
 	int resultado;
 	int numok = 0;
+
 	if (argc < 2)
 	{
-		printf ("0\n");
+		printf("0\n");
 		return (0);
 	}
 	for (i = 1; i < argc; i++)
@@ -23,7 +24,6 @@ int main(int argc, char *argv[])
 		j = 0;
 		while (argv[i][j] != '\0')
 		{
-
 			if (argv[i][j] > 47 && argv[i][j] < 58)
 			{
 				numok = 1;
