@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 		if (isnumber == 1)
 		{
 			printf("Error\n");
-			return (1);
+			return (0);
 		}
 		cent = atoi(argv[1]);
 		if (cent <= 0)
