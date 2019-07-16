@@ -1,4 +1,4 @@
-#include <stdlib.h>
+\#include <stdlib.h>
 #include <stdio.h>
 #include "holberton.h"
 /**
@@ -15,14 +15,13 @@ char *_strdup(char *str)
 
 	if (str[0] == '\0')
 		return ('\0');
-
-	value = malloc(sizeof(char) * i);
-	if (value == 0)
-		return ('\0');
 	while (str[i])
 	{
 		i++;
 	}
+	value = malloc(sizeof(char) * i);
+	if (value == 0)
+		return ('\0');
 	for (j = 0; j <= i; j++)
 	{
 		value[j] = str[j];
