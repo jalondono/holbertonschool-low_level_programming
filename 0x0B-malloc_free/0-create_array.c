@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
- *main - Print an string using recursion
- *@argc: number of arguments
- *@argv: vector with the values
- *Result: always return 0
- *Return: nothing
+ *create_array - create a dinamic buffer and inicialize
+ *@size: size of buffer
+ *@c: incitial character
+ *Result: a matrix with H character
+ *Return: a pointer if can do  the buffer
  */
 char *create_array(unsigned int size, char c)
 {
