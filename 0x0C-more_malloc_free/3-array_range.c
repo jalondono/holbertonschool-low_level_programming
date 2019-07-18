@@ -12,7 +12,9 @@ int *array_range(int min, int max)
 {
 	int *var = NULL;
 	int i = 0;
+	int j = 0;
 
+	j = min;
 	if (min < 0 || max < 0)
 		return (NULL);
 
@@ -21,9 +23,9 @@ int *array_range(int min, int max)
 	var = (int *)malloc(sizeof(int) * (max - min) + 1);
 	if (var == NULL)
 		return (NULL);
-	for (i = min; i <= (max - min); i++)
+	for (i = 0; i <= (max - min); i++,j++)
 	{
-		var[i] = i;
+		var[i] = j;
 	}
 	return (var);
 }
