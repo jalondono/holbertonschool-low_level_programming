@@ -10,19 +10,22 @@
  */
 int *array_range(int min, int max)
 {
-	int *var;
-	int i;
-	int j;
+	int *var = NULL;
+	int i = 0;
+	int j = 0;
+
+
+	if (min < 0 || max < 0)
+		return (NULL);
 
 	if (min > max)
 		return (NULL);
 	var = (int *)malloc(sizeof(int) * (max - min + 1));
 	if (var == NULL)
 		return (NULL);
-	for (i = 0, j = min; j <= max; i++)
+	for (i = 0, j = min; i <= (max - min); i++, j++)
 	{
 		var[i] = j;
-		j++;
 	}
 	return (var);
 }
