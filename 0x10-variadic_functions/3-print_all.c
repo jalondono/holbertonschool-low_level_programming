@@ -14,6 +14,7 @@ void print_all(const char * const format, ...)
 	int i = 0, x = 0;
 	va_list args;
 	char *string;
+	//char tipo;
 
 	if (format == NULL)
 		return;
@@ -25,14 +26,18 @@ void print_all(const char * const format, ...)
 		{
 		case 'c':
 			printf("%c", va_arg(args, int));
+			//tipo = 'c';
 			break;
 		case 'i':
 			printf("%d", va_arg(args, int));
+			//tipo = 'i';
 			break;
 		case 'f':
 			printf("%f", va_arg(args, double));
+			//tipo = 'f';
 			break;
 		case 's':
+			//tipo = 's';
 			string = va_arg(args, char *);
 			while (string == NULL)
 			{
@@ -44,7 +49,7 @@ void print_all(const char * const format, ...)
 		default:
 			x = 1;
 		}
-		if (format[i + 1] != '\0' && x == 0)
+		if (x == 0 && (format[i + 2] != '\0'))
 			printf(", ");
 		i++;
 	}
