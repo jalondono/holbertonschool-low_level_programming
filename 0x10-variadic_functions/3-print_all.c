@@ -11,12 +11,12 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i = 0, x = 0, j = 0;
+	int i = 0;
 	va_list args;
 	char *string;
 
 	va_start(args, format);
-	while (format[i] != '\0' && format)
+	while (format[i] != '\0' && format != NULL)
 	{
 		x = 0, j = 0;
 		switch (format[i])
@@ -38,17 +38,13 @@ void print_all(const char * const format, ...)
 				break;
 			}
 			printf("%s", string);
-		default:
-			x = 1;
 		}
-		while (x == 0 && format[j] != '\0')
-		{
-			j++;
-			if (format[i + j] == 'c' || format[i + j] == 'i' ||
-			    format[i + j] == 'f' || format[i + j] == 's')
-				printf(", "), x = 1;
-		}
+			if (format[i] == 'c' || format[i] == 'i' ||
+			    format[i] == 'f' || format[i] == 's' &&
+			    format[]i + 1 != 0)
+				printf(", ");
 		i++;
 	}
-	printf("\n");
+
+	printf("\n"), va_end(args);
 }
