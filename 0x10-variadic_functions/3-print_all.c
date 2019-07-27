@@ -37,12 +37,12 @@ void print_all(const char * const format, ...)
 			break;
 		case 's':
 			string = va_arg(args, char *);
-			if (string == NULL)
+			if (string != NULL)
 			{
-				string = "(nil)";
+				printf("%s", string);
 				break;
 			}
-			printf("%s", string);
+			printf("(nil)");
 			break;
 		}
 		if ((format[i] == 'c' || format[i] == 'i' ||
