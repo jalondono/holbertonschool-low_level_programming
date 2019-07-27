@@ -14,13 +14,11 @@ void print_all(const char * const format, ...)
 	int i = 0, x = 0, j = 0;
 	va_list args;
 	char *string;
-	//char *car = "cifs";
 
 	va_start(args, format);
 	while (format[i] != '\0' && format)
 	{
-		x = 0;
-		j = 0;
+		x = 0, j = 0;
 		switch (format[i])
 		{
 		case 'c':
@@ -40,7 +38,6 @@ void print_all(const char * const format, ...)
 				break;
 			}
 			printf("%s", string);
-			break;
 		default:
 			x = 1;
 		}
@@ -49,13 +46,9 @@ void print_all(const char * const format, ...)
 			j++;
 			if (format[i + j] == 'c' || format[i + j] == 'i' ||
 			    format[i + j] == 'f' || format[i + j] == 's')
-			{
-				printf(", ");
-				x = 1;
-			}
+				printf(", "), x = 1;
 		}
 		i++;
 	}
 	printf("\n");
-	return;
 }
