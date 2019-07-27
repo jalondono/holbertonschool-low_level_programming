@@ -11,35 +11,30 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i = 0, x = 0;
+	int i = 0, x = 0, j = 0;
 	va_list args;
 	char *string;
-	//char tipo;
+	//char *car = "cifs";
 
-	if (format == NULL)
-		return;
 	va_start(args, format);
-	while (format[i] != '\0')
+	while (format[i] != '\0' && format)
 	{
 		x = 0;
+		j = 0;
 		switch (format[i])
 		{
 		case 'c':
 			printf("%c", va_arg(args, int));
-			//tipo = 'c';
 			break;
 		case 'i':
 			printf("%d", va_arg(args, int));
-			//tipo = 'i';
 			break;
 		case 'f':
 			printf("%f", va_arg(args, double));
-			//tipo = 'f';
 			break;
 		case 's':
-			//tipo = 's';
 			string = va_arg(args, char *);
-			while (string == NULL)
+			if (string == NULL)
 			{
 				string = "(nil)";
 				break;
@@ -49,9 +44,18 @@ void print_all(const char * const format, ...)
 		default:
 			x = 1;
 		}
-		if (x == 0 && (format[i + 2] != '\0'))
-			printf(", ");
+		while (x == 0 && format[j] != '\0')
+		{
+			j++;
+			if (format[i + j] == 'c' || format[i + j] == 'i' ||
+			    format[i + j] == 'f' || format[i + j] == 's')
+			{
+				printf(", ");
+				x = 1;
+			}
+		}
 		i++;
 	}
 	printf("\n");
+	return;
 }
