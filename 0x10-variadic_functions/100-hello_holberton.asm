@@ -1,18 +1,19 @@
-global _start
+	;;  Exemplo de um Hello World em Assembly
+	;;  ld -m elf_i386 -s -o hello hello.o
+	section .text align=0
 
-	section .text
+	global _start
+
+	mensagem db 'Hello world!', 0x0a
+
+	len equ $ - mensagem
 
 _start:
-	  mov rax, 1        	; write(
-	  mov rdi, 1        	;   STDOUT_FILENO,
-	  mov rsi, msg      	;   "Hello, world!\n",
-	  mov rdx, msglen   	;   sizeof("Hello, world!\n")
-	  syscall           	; );
+	    mov eax, 4 		;SYS_write
+	    mov ebx, 1 		;Número do file descriptor (1=stdout)
+	    mov ecx, mensagem 	;Ponteiro para a string.
+	    mov edx, len 	; tamanho da mensagem
+	    int 0x80
 
-	  mov rax, 60       	; exit(
-	  mov rdi, 0        	;   EXIT_SUCCESS
-	  syscall           	; );
-
-	section .rodata
-msg:	 db "Hello, world!", 10
-msglen:	 equ $ - msg
+	    mov eax, 1
+	    int 0x8
