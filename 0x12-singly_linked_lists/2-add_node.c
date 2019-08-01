@@ -19,8 +19,9 @@ int _strlen(char *s)
 }
 
 /**
- * and_node - singly linked list
- * @h: structure
+ * add_node - singly linked list
+ * @head: structure
+ *@str: name
  * Description: singly linked list node structure
  *Return: a number of elements
  * for Holberton project
@@ -29,7 +30,7 @@ list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new;
 	int len = 0;
-	char * dubstring;
+	char *dubstring;
 
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
