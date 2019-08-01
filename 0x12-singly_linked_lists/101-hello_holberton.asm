@@ -1,9 +1,9 @@
 section   .data
 message:	  db        "Hello, Holberton", 10 ; note the newline at the end
 .size equ $ - message
-	global    main
 
-	          section   .text
+	section   .text
+	global    main
 main:
 	          mov       rdi, 1 ; file handle 1 is stdout
 	          mov       rsi, message ; address of string to output
