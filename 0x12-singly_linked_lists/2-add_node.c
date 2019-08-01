@@ -37,7 +37,10 @@ list_t *add_node(list_t **head, const char *str)
 		return (NULL);
 	dubstring = strdup(str);
 	if (dubstring == NULL)
+	{
+		free(new);
 		return (NULL);
+	}
 	len = _strlen(dubstring);
 	new->str = dubstring;
 	new->len = len;
