@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * print_list - singly linked list
+ * list_len - singly linked list
  * @h: structure
  * Description: singly linked list node structure
  *Return: a number of elements
