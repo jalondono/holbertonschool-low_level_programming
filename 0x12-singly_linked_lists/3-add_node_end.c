@@ -16,6 +16,13 @@ int _strlen(char *s)
 		c++;
 	return (c);
 }
+/**
+ *add_node_end - program thisgs
+ *Result: always return 0
+ *@head: pointer to structure
+ *@str: data
+ *Return: value depending on function
+ */
 
 list_t *add_node_end(list_t **head, const char *str)
 {
@@ -32,7 +39,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	string = strdup(str);
 	if (string == NULL)
 	{
-		free (new);
+		free(new);
 		return (NULL);
 	}
 	len = _strlen(string);
