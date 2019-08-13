@@ -22,9 +22,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	result = read(fd, s, sizeof(char) * letters);
 	if (result == -1)
+	{
+		free(s);
 		return (0);
+	}
 	result = write(1, s, sizeof(char) * letters);
 	if (result == -1)
+	{
+		free(s);
 		return (0);
+	}
+	close (fd);
 	return (result);
 }
