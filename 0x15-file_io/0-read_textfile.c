@@ -21,13 +21,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	s = malloc(sizeof(char) * letters);
 	if (s == NULL)
 		return (0);
-	size = read(fd, s, sizeof(char) * letters);
+	size = read(fd, s, letters);
 	if (size == -1)
 	{
 		free(s);
 		return (0);
 	}
-	result = write(1, s, size);
+	result = write(STDOUT_FILENO, s, size);
 	if (result == -1)
 	{
 		free(s);
