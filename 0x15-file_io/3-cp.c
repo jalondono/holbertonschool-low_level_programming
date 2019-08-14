@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int resultfrom, resultto, fdfrom, fdto, closefrom, closeto = 0;
+	int resultfrom = 0, resultto = 0, fdfrom, fdto, closefrom, closeto = 0;
 	char *namefrom, *nameto;
 	char buf[1024];
 
@@ -24,20 +24,16 @@ int main(int argc, char *argv[])
 	if (fdto == -1)
 	{dprintf(STDERR_FILENO, "Error: Can't write to %s\n", nameto);
 		exit(99); }
-	resultfrom = read(fdfrom, buf, 1024);
-	if (resultfrom == -1)
-	{dprintf(STDERR_FILENO, "Usage: Error: Can't read from file %s\n", namefrom);
-		exit(98); }
-	while (resultfrom != 0)
+	while ((resultfrom = read(fdfrom, buf, 1024)) != 0)
 	{
+		if (resultfrom == -1)
+		{dprintf(STDERR_FILENO, "Usage: Error: Can't read from file %s\n", namefrom);
+			exit(98); }
 		resultto = write(fdto, buf, resultfrom);
 		if (resultto  == -1)
 		{dprintf(STDERR_FILENO, "Error: Can't write to %s\n", nameto);
 			exit(99);
-		} resultfrom = read(fdfrom, buf, 1024);
-		if (resultfrom == -1)
-		{dprintf(STDERR_FILENO, "Usage: Error: Can't read from file %s\n", namefrom);
-			exit(98); }
+		}
 	}
 	closeto = close(fdto);
 	if (closeto == -1)
