@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
- *sum_listint - program thisgs
+ *sum_dlistint - program thisgs
  *Result: always return 0
  *@head: pointer to structure
  *Return: value depending on function
