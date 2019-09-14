@@ -28,13 +28,8 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		return (new);
 	}
 	while (copy->next != NULL)
-	{
 		copy = copy->next;
-		if (copy->next == NULL)
-		{
-			new->prev = copy;
-		}	
-	}
+	new->prev = copy;
 	copy->next = new;
 	return (new);
 }
