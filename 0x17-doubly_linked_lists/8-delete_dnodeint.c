@@ -14,7 +14,7 @@ int pop_dlistint(dlistint_t **head)
 		return (0);
 	temp = (*head)->next;
 	tempval = (*head)->n;
-	temp->prev = NULL;
+	/*temp->prev = NULL;*/
 	free(*head);
 	*head = temp;
 	return (tempval);
