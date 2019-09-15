@@ -2,12 +2,12 @@
 /**
  *insert_dnodeint_at_index - program thisgs
  *Result: always return 0
- *@head: pointer to structure
+ *@h: pointer to structure
  *@idx: index to add a node
  *@n: value to node
  *Return: value depending on function
  */
-dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int idx, int n)
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *copy = *head;
 	dlistint_t *new;
@@ -29,6 +29,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int idx, int n)
 		if (copy == NULL)
 			return (NULL);
 		i++;
+	}
+	if (copy->next == NULL) {
+		return (add_dnodeint_end(h, n));
 	}
 	new->n = n;
 	new->next = copy->next;
