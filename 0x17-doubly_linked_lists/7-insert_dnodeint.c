@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- *insert_nodeint_at_index - program thisgs
+ *insert_dnodeint_at_index - program thisgs
  *Result: always return 0
  *@head: pointer to structure
  *@idx: index to add a node
@@ -32,6 +32,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **head, unsigned int idx, int n)
 	}
 	new->n = n;
 	new->next = copy->next;
+	copy->next->prev = new;
 	new->prev = copy;
 	copy->next = new;
 	return (new);
