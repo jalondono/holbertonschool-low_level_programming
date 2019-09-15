@@ -39,17 +39,18 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 
 	while (maincopy != NULL || head != NULL)
 	{
-		if (index == 0)
-		{
-			return (pop_dlistint(head));
-		}
 		if (i == index - 1)
 		{
 			tempnode = maincopy->next->next;
+			if (tempnode != NULL)
+				tempnode->prev = maincopy;
 			free(maincopy->next);
-			tempnode->prev = maincopy;
 			maincopy->next = tempnode;
 			return (1);
+		}
+		else if (index == 0)
+		{
+			return (pop_dlistint(head));
 		}
 		maincopy = maincopy->next;
 		i++;
