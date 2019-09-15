@@ -8,16 +8,19 @@
 int pop_dlistint(dlistint_t **head)
 {
 	dlistint_t *temp = NULL;
-	int tempval = 0;
 
 	if (*head == NULL)
-		return (0);
+		return (-1);
 	temp = (*head)->next;
-	tempval = (*head)->n;
-	/*temp->prev = NULL;*/
-	free(*head);
-	*head = temp;
-	return (tempval);
+	if (temp != NULL)
+	{
+		temp->prev = NULL;
+		free(*head);
+		*head = temp;
+	}
+	else
+		*head = NULL;
+	return (1);
 	}
 
 /**
@@ -34,19 +37,18 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	dlistint_t *maincopy = *head;
 	dlistint_t *tempnode;
 
-	while (maincopy)
+	while (maincopy != NULL || head != NULL)
 	{
+		if (index == 0)
+		{
+			return (pop_dlistint(head));
+		}
 		if (i == index - 1)
 		{
 			tempnode = maincopy->next->next;
 			free(maincopy->next);
-			maincopy->next = tempnode;
 			tempnode->prev = maincopy;
-			return (1);
-		}
-		if (index == 0)
-		{
-			pop_dlistint(head);
+			maincopy->next = tempnode;
 			return (1);
 		}
 		maincopy = maincopy->next;
