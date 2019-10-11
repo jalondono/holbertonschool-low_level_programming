@@ -14,11 +14,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *newnode;
 	hash_node_t *tempnode;
 
-	if (ht == NULL)
+	if (ht == NULL || key == NULL)
 		return (0);
-	if  (key == NULL)
+	if (strcmp(key,"") || value == NULL)
 		return (0);
-
 	index = key_index((const unsigned char *)key, ht->size);
 	newnode = malloc(sizeof(hash_node_t));
 	if (newnode == NULL)
