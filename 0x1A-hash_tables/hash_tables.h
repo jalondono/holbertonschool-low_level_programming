@@ -1,5 +1,5 @@
-#ifndef INC_0X1A_HASH_TABLES_HASH_TABLES_H
-#define INC_0X1A_HASH_TABLES_HASH_TABLES_H
+#ifndef INC_0X1A_HASH_TABLES__H
+#define INC_0X1A_HASH_TABLES_H
 
 #include <stdio.h>
 #include <stdlib.h>
