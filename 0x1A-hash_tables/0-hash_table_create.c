@@ -12,7 +12,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	if (size == 0)
 		return (NULL);
-	hashtable = malloc(sizeof(struct hash_table_s) * 1);
+	hashtable = malloc(sizeof(hashtable) * 1);
 	if (hashtable == NULL)
 		return (NULL);
 	hashtable->array = malloc(sizeof(hash_node_t *) * size);
