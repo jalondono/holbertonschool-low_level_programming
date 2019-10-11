@@ -34,11 +34,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	else
 	{
 		tempnode = ht->array[index];
-		while(tempnode != NULL)
+		while (tempnode != NULL)
 		{
 			if (strcmp(tempnode->key, key) == 0)
 			{
-				tempnode->value = (char *)value;
+				free(tempnode->value);
+				tempnode->value = strdup(value);
 				return (1);
 			}
 			tempnode = tempnode->next;
