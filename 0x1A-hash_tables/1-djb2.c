@@ -1,4 +1,9 @@
 #include "hash_tables.h"
+/**
+ * hash_djb2-  hash function
+ *@str: key
+ * Return: a randomly number of index
+ */
 unsigned long int hash_djb2(const unsigned char *str)
 {
 	unsigned long int hash;
