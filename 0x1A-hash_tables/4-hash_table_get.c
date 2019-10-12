@@ -15,18 +15,14 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	unsigned long int index;
 	hash_node_t *node;
 	const unsigned char *u_key;
-	
+
 	if (strcmp(key, "") == 0 || !ht)
 		return (0);
-	
 	u_key = (const unsigned char *) key;
-	
 	/* get the hash */
 	index = key_index(u_key, ht->size);
-	
 	if (ht->array[index] == NULL)
 		return (NULL);
-	
 	node = ht->array[index];
 	while (node)
 	{
