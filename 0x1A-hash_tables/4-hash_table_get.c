@@ -1,26 +1,26 @@
 #include "hash_tables.h"
+#include <string.h>
 /**
- * hash_table_get - hash function
- * @ht: size of
- *@key: key
- * Return: a randomly number of index
- */
+* hash_table_get - gets the function that retrieves a value
+* @ht: the hash table I want to look
+* @key: the keys I'm looking for
+* Return: the value associated
+*/
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	unsigned int index = 0;
-	hash_node_t *node;
-
-	if (ht == NULL || strcmp("", key) == 0)
-		return (0);
-	index = key_index((const unsigned char *)key, ht->size);
-	node = ht->array[index];
-	if (node == NULL)
+	hash_node_t *tmp;
+	unsigned long int index;
+	
+	if (ht == NULL || key == NULL)
 		return (NULL);
-	while (node != NULL)
+	
+	index = key_index((const unsigned char *)key, ht->size);
+	tmp = ht->array[index];
+	while (tmp != NULL)
 	{
-		if (strcmp(node->key, key) == 0)
-			return (node->value);
-		node = node->next;
+		if (strcmp(tmp->key, key) == 0)
+			return (tmp->value);
+		tmp = tmp->next;
 	}
 	return (NULL);
 }
