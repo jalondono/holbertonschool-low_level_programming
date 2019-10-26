@@ -1,11 +1,16 @@
 #include "sort.h"
 
+/**
+ * bubble_sort- Prints an array of integers
+ *
+ * @array: The array to be printed
+ * @size: Number of elements in @array
+ */
+
 void bubble_sort(int *array, size_t size)
 {
-	float startTime = 0, endTime = 0, timeElapsed = 0;
 	size_t  i = 0;
 	int auxValueArray = 0, j = 1;
-	startTime = (float)clock()/CLOCKS_PER_SEC;
 	while (j == 1)
 	{
 		j = 0;

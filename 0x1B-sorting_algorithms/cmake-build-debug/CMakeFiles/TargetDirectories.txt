@@ -1,0 +1,3 @@
+/home/ja-holberton/Holberton/holbertonschool-low_level_programming/0x1B-sorting_algorithms/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ja-holberton/Holberton/holbertonschool-low_level_programming/0x1B-sorting_algorithms/cmake-build-debug/CMakeFiles/main.dir
+/home/ja-holberton/Holberton/holbertonschool-low_level_programming/0x1B-sorting_algorithms/cmake-build-debug/CMakeFiles/edit_cache.dir

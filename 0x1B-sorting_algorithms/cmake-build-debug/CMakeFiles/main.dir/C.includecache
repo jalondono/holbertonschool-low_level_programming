@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ja-holberton/Holberton/holbertonschool-low_level_programming/0x1B-sorting_algorithms/1-main.c
+stdio.h
+-
+stdlib.h
+-
+sort.h
+/home/ja-holberton/Holberton/holbertonschool-low_level_programming/0x1B-sorting_algorithms/sort.h
+
+/home/ja-holberton/Holberton/holbertonschool-low_level_programming/0x1B-sorting_algorithms/sort.h
+stdlib.h
+-
+string.h
+-
+stdio.h
+-
+time.h
+-
+
