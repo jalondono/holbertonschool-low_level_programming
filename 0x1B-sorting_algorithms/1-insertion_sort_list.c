@@ -69,9 +69,12 @@ void insertion_sort_list(listint_t **list)
 		else
 		{
 			if (act->next != NULL)
+			{
 				act = act->next;
+				(*list) = act->prev;
+			}
 			if (sgt->next != NULL)
 				sgt = sgt->next;
 		}	i++;
-	}	(*list) = sgt;
+	}
 }
