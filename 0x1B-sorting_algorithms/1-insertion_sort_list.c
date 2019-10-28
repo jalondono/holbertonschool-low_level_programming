@@ -1,5 +1,10 @@
 #include "sort.h"
-
+/**
+ * swapNode - Function to swap to nodes
+ * @copy: list to be swapped
+ *
+ * Return: Nothing
+ */
 void swapNode(listint_t *copy)
 {
 	listint_t *nextAux;
@@ -17,40 +22,56 @@ void swapNode(listint_t *copy)
 	copyHead->prev = copy->prev;
 	copy->next = nextAux;
 	copy->prev = copyHead;
-
+	if (copy->prev != NULL)
+		copy = copy->prev;
 }
-void insertion_sort_list(listint_t **list) {
-	listint_t *ant = *list;
-	listint_t *act = *list;
-	listint_t *sgt = *list;
+
+/**
+ * insertion_sort_list - insertion sort algorythm
+ * @list: list to be insertion_sort
+ *
+ * Return: Nothing
+ */
+void insertion_sort_list(listint_t **list)
+{
+	listint_t *ant = *list, *act = *list, *sgt = *list, *aux;
+	int i = 0;
 
 	if (*list == NULL)
 		return;
-	sgt = sgt->next;
-	if (sgt == NULL)
+	if (sgt->next != NULL)
+		sgt = sgt->next;
+	else
 		return;
 	while (act->next)
 	{
 		if (act->n > sgt->n)
-		{
-			swapNode(act);
+		{swapNode(act);
+			if (i == 0)
+				(*list) = (*list)->prev;
+			print_list(*list);
 			ant = act->prev;
 			if (act->next != NULL)
-			{
 				sgt = act->next;
-			}
 			while (ant->prev)
-			{
+			{	aux = ant;
 				ant = ant->prev;
-				if (ant->n > act->prev->n)
-				{
-					swapNode(ant);
-					break;
-				}
+				if (aux->n < ant->n)
+				{	swapNode(ant);
+					if ((*list)->prev != NULL)
+						(*list) = ant->prev;
+					print_list(*list);
+					ant = ant->prev;
+				}	else
+						break;
 			}
-
 		}
-	}
-	print_list(sgt);
-	*list = sgt;
+		else
+		{
+			if (act->next != NULL)
+				act = act->next;
+			if (sgt->next != NULL)
+				sgt = sgt->next;
+		}	i++;
+	}	(*list) = sgt;
 }
