@@ -34,11 +34,14 @@ void swapNode(listint_t *copy)
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *ant = *list, *act = *list, *sgt = *list, *aux;
+	listint_t *ant, *act, *sgt, *aux;
 	int i = 0;
 
-	if (!*list || !list || !(*list)->next)
+	if (list == NULL || *list == NULL)
 		return;
+	if ((*list)->next == NULL)
+		return;
+	ant = *list, act = *list, sgt = *list;
 	if (sgt->next != NULL)
 		sgt = sgt->next;
 	else
@@ -66,10 +69,7 @@ void insertion_sort_list(listint_t **list)
 		}	else
 		{
 			if (act->next != NULL)
-			{
 				act = act->next;
-				(*list) = act->prev;
-			}
 			if (sgt->next != NULL)
 				sgt = sgt->next;
 		}	i++;
