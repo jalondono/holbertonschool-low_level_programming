@@ -54,19 +54,16 @@ void insertion_sort_list(listint_t **list)
 			if (act->next != NULL)
 				sgt = act->next;
 			while (ant->prev)
-			{	aux = ant;
-				ant = ant->prev;
+			{	aux = ant, ant = ant->prev;
 				if (aux->n < ant->n)
 				{	swapNode(ant);
 					if ((*list)->prev != NULL)
 						(*list) = ant->prev;
-					print_list(*list);
-					ant = ant->prev;
+					print_list(*list), ant = ant->prev;
 				}	else
 						break;
 			}
-		}
-		else
+		}	else
 		{
 			if (act->next != NULL)
 			{
