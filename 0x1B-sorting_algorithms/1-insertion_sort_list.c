@@ -37,7 +37,7 @@ void insertion_sort_list(listint_t **list)
 	listint_t *ant = *list, *act = *list, *sgt = *list, *aux;
 	int i = 0;
 
-	if (*list == NULL)
+	if (!*list || !list || !(*list)->next)
 		return;
 	if (sgt->next != NULL)
 		sgt = sgt->next;
