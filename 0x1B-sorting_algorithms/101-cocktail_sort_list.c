@@ -42,30 +42,20 @@ void cocktail_sort_list(listint_t **list)
 	while (exit == 1)
 	{
 		exit = 0;
-		while (exitForward == 1)
+		while (actList->next)
 		{
 			if (actList->n > actList->next->n)
 			{
 				swapNode101(actList);
 				if ((*list)->prev != NULL)
 					(*list) = (*list)->prev;
-				print_list(*list), exit = 1;
-			}
-			else
+				print_list(*list);
+				exit = 1;
+			} else
 				actList = actList->next;
-			if (firtsTime == 0)
-			{
-				if (actList->next == NULL)
-					exitForward = 0, exitReverse = 1, max = actList;
-			}
-			else
-			{
-				if (actList->next == max)
-					max = max->prev, exitForward = 0, exitReverse = 1;
-			}
 		}
-		prevList = max->prev;
-		while (exitReverse == 1)
+		prevList = actList;
+		while (prevList->prev)
 		{
 			if (prevList->prev == NULL)
 				return;
@@ -75,19 +65,8 @@ void cocktail_sort_list(listint_t **list)
 				if ((*list)->prev != NULL)
 					(*list) = (*list)->prev;
 				print_list(*list), exit = 1;
-			}
-			else
+			} else
 				prevList = prevList->prev;
-			if (firtsTime == 0)
-			{
-				if (prevList->prev == NULL)
-					exitReverse = 0, exitForward = 1, min = prevList;
-			}
-			else
-			{
-				if (prevList->prev == min)
-					exitReverse = 0, exitForward = 1, min = prevList;
-			}
-		}	actList = min->next, firtsTime++;
+		}
 	}
 }
