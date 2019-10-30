@@ -1,4 +1,5 @@
 #include "sort.h"
+
 /**
  * swapNode - Function to swap to nodes
  * @copy: list to be swapped
@@ -25,7 +26,6 @@ void swapNode(listint_t *copy)
 	if (copy->prev != NULL)
 		copy = copy->prev;
 }
-
 /**
  * insertion_sort_list - insertion sort algorythm
  * @list: list to be insertion_sort
