@@ -31,14 +31,14 @@ void swapNode101(listint_t *copy)
 */
 void cocktail_sort_list(listint_t **list)
 {
-	listint_t *actList, *prevList, *min, *max;
-	int exit = 1, exitForward = 1, exitReverse = 1, firtsTime = 0;
+	listint_t *actList, *prevList;
+	int exit = 1;
 
 	if (list == NULL || *list == NULL)
 		return;
 	if ((*list)->next == NULL)
 		return;
-	actList = (*list), prevList = (*list), min = (*list);
+	actList = (*list), prevList = (*list);
 	while (exit == 1)
 	{
 		exit = 0;
