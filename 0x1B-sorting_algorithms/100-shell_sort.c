@@ -1,20 +1,36 @@
 #include "sort.h"
-
+/**
+ * shell_sort - Function to swap to nodes
+ * @array: list to be swapped
+ * @size: size of array
+ *
+ * Return: Nothing
+ */
 void shell_sort(int *array, size_t size)
 {
-	size_t gap = size / 2, i = 0, j = 0, k = 0;
-	int temp = 0;
-	for (i = gap; i > 0; i /= 2)
+	int tmp;
+	size_t  i = 0, j = 0, d = 1;
+
+	if (array == NULL || size < 2)
+		return;
+	while (d <= size / 3)
 	{
-		for (j = gap; j < size; i += 1)
+		d = (d * 3) + 1;
+	}
+	while (d > 0)
+	{
+		for (i = d; i < size; i++)
 		{
-			temp = array[i];
-			for (k = i; k >= gap && array[j - gap] > temp; k -= gap)
+			tmp = array[i];
+			j = i;
+			while (j > d - 1 && array[j - d] >= tmp)
 			{
-				array[j] = array[j - gap];
+				array[j] = array[j - d];
+				j = j - d;
 			}
-			array[j] = temp;
-			print_array(array, size);
+			array[j] = tmp;
 		}
+		print_array(array, size);
+		d = (d - 1) / 3;
 	}
 }

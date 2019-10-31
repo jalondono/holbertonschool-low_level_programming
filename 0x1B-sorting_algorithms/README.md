@@ -1,13 +1,17 @@
-Why C programming is awesome (don’t forget to tweet today, with the hashtag #cisfun :))
-Who invented C
-Who are Dennis Ritchie, Brian Kernighan and Linus Torvalds
-What happens when you type gcc main.c
-What is an entry point
-What is main
-How to print text using printf, puts and putchar
-How to get the size of a specific type using the unary operator sizeof
-How to compile using gcc
-What is the default program name when compiling with gcc
-What is the official Holberton C coding style and how to check your code with betty-style
-How to find the right header to include in your source code when using a standard library function
-How does the main function influence the return value of the program
+# Project Title
+
+Holberton School 
+0x1B Sorting Algorithms
+
+## Authors
+
+* **Cesar Velez** - *Low Level Repository* 
+
+## Step by Step
+
+* 0x00: Bubble sort
+* 0x01: Insertion sort
+* 0x02: Selection sort
+* 0x03: Quick sort
+* 0x04: Shell sort - Knuth Sequence (Adv)
+**

@@ -1,14 +1,14 @@
 #include "sort.h"
 
 /**
- * swaper - swaps position values
+ * swap - swaps position values
  * @array: array
  * @i: value to swap
  * @j: value to swap
  * @size: size
  * Return: void
  */
-void swap(int array[], int i, int j, size_t size)
+void swap(int *array, int i, int j, size_t size)
 {
 	int holder = 0;
 
@@ -20,14 +20,14 @@ void swap(int array[], int i, int j, size_t size)
 }
 
 /**
- * hoare - hoare partition scheme
+ * partition_hoare - hoare partition scheme
  * @array: array
  * @low: pointer value to evaluate
  * @high: pointer value to evaluate
  * @size: size
  * Return: void
  */
-int partition_hoare(int array[], int low, int high, int size)
+int partition_hoare(int *array, int low, int high, int size)
 {
 	int pivot, i, j;
 
@@ -63,7 +63,7 @@ int partition_hoare(int array[], int low, int high, int size)
  * Return: Nothing
  */
 void quicksorterhoare(int *array, int low, int high, size_t size,
-                        int partition_index)
+int partition_index)
 {
 	int partition_index_new, left, right;
 

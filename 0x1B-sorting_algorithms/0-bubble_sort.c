@@ -6,7 +6,6 @@
  * @array: The array to be printed
  * @size: Number of elements in @array
  */
-
 void bubble_sort(int *array, size_t size)
 {
 	size_t  i = 0;
