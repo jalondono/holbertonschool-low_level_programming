@@ -10,8 +10,6 @@ def island_perimeter(grid):
         return 0
     limY = len(grid) - 1
     limX = len(grid[0]) - 1
-    print(limY)
-    print(limX)
     acumulado = 0
     x = 0
     y = 0
