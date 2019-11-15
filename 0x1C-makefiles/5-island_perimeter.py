@@ -43,7 +43,8 @@ def island_perimeter(grid):
                     # si encuentra un cero a la derecha del actual, no debe
                     # buscar mas, debe bajar una posicion
                     # y reset x, para comenzar desde el comienzo a buscar un 1
-                    # debe aumentar el acumulado por no encontra nada a la derecha
+                    # debe aumentar el acumulado por no
+                    # encontra nada a la derecha
                     y += 1
                     x = 0
                     acumulado += 1
@@ -60,6 +61,10 @@ def island_perimeter(grid):
                     # si Y ya paso el limite entonces ya termino de buscar
                     if y > limY:
                         return acumulado
+            else:
+                acumulado += 1
+                x = 0
+                y += 1
         else:
             # si grid[y][x] no es 1, entonces me muevo a la
             # derecha una posicion
