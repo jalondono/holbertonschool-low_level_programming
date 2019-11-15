@@ -29,6 +29,7 @@ def island_perimeter(grid):
                 if grid[y - 1][x] == 0:
                     finish = False
                     finish = True
+                    acumulado += 1
             # busca un 0 a la izquierda, si la encuentra acumula 1
             # pero x debe ser diferente de 0, osea que no este en la pared
             if grid[y][x - 1] == 0 and x != 0:
