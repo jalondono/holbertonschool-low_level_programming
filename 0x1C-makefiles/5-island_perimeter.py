@@ -33,8 +33,9 @@ def island_perimeter(grid):
             if grid[y][x - 1] == 0 and x != 0:
                 acumulado += 1
             # busca a la abajo, si encuentra 0 incrementa el acumulado
-            if grid[y + 1][x] == 0:
-                acumulado += 1
+            if y < limY:
+                if grid[y + 1][x] == 0:
+                    acumulado += 1
             if grid[y][x + 1] == 0:
                 # si encuentra un cero a la derecha del actual, no debe
                 # buscar mas, debe bajar una posicion
