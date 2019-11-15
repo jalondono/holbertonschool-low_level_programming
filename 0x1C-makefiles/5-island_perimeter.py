@@ -30,33 +30,36 @@ def island_perimeter(grid):
                     acumulado += 1
             # busca un 0 a la izquierda, si la encuentra acumula 1
             # pero x debe ser diferente de 0, osea que no este en la pared
-            if grid[y][x - 1] == 0 and x != 0:
+            if grid[y][x - 1] == 0 and x != 0 or x == 0:
                 acumulado += 1
             # busca a la abajo, si encuentra 0 incrementa el acumulado
             if y < limY:
                 if grid[y + 1][x] == 0:
                     acumulado += 1
-            if grid[y][x + 1] == 0:
-                # si encuentra un cero a la derecha del actual, no debe
-                # buscar mas, debe bajar una posicion
-                # y reset x, para comenzar desde el comienzo a buscar un 1
-                # debe aumentar el acumulado por no encontra nada a la derecha
-                y += 1
-                x = 0
+            if y == limY:
                 acumulado += 1
-            # si en vez de 0 encuentra 1, debe seguir avanzando en x hasta
-            # encontra un 0
-            else:
-                # incrementa en 1 X
-                x += 1
-                # si x es mayor que el limite, se debe resetear y bajar un
-                # renglon en Y
-                if x > limX:
-                    x = 0
+            if x < limX:
+                if grid[y][x + 1] == 0:
+                    # si encuentra un cero a la derecha del actual, no debe
+                    # buscar mas, debe bajar una posicion
+                    # y reset x, para comenzar desde el comienzo a buscar un 1
+                    # debe aumentar el acumulado por no encontra nada a la derecha
                     y += 1
-                # si Y ya paso el limite entonces ya termino de buscar
-                if y > limY:
-                    return acumulado
+                    x = 0
+                    acumulado += 1
+                # si en vez de 0 encuentra 1, debe seguir avanzando en x hasta
+                # encontra un 0
+                else:
+                    # incrementa en 1 X
+                    x += 1
+                    # si x es mayor que el limite, se debe resetear y bajar un
+                    # renglon en Y
+                    if x > limX:
+                        x = 0
+                        y += 1
+                    # si Y ya paso el limite entonces ya termino de buscar
+                    if y > limY:
+                        return acumulado
         else:
             # si grid[y][x] no es 1, entonces me muevo a la
             # derecha una posicion
