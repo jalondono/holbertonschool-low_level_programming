@@ -3,6 +3,9 @@ SRC = main.c holberton.c
 OBJ = $(SRC:%.c=%.o)
 NAME = holberton
 RM = rm -f
+CFLAGS = -wall -werror -wextra -pedantic
+
+.PHONY: all clean oclean fclean re
 
 all:$(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
