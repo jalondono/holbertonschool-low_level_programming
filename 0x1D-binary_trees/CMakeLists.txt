@@ -9,4 +9,8 @@ add_executable(main
         2-binary_tree_insert_right.c
         3-binary_tree_delete.c
         4-binary_tree_is_leaf.c
-        4-main.c)
+        5-binary_tree_is_root.c
+        6-binary_tree_preorder.c
+        7-binary_tree_inorder.c
+        8-binary_tree_postorder.c
+        7-main.c)
