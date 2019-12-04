@@ -1,6 +1,6 @@
 #include "binary_trees.h"
 /**
- * binary_tree_height_Aux- function that checks if a given node is a root
+ * binary_tree_height_Aux1- function that checks if a given node is a root
  * @tree: Where tree is a pointer to the root node of the tree to traverse
  * The value in the node must be passed as a parameter to this function.
  * Return: Always 1
@@ -23,7 +23,7 @@ size_t binary_tree_height_Aux1(const binary_tree_t *tree)
 		return (rightHeight + 1);
 }
 /**
- * binary_tree_height- function that checks if a given node is a root
+ * binary_tree_height1- function that checks if a given node is a root
  * @tree: Where tree is a pointer to the root node of the tree to traverse
  * The value in the node must be passed as a parameter to this function.
  * Return: Always 1
@@ -39,7 +39,7 @@ size_t binary_tree_height1(const binary_tree_t *tree)
 	return (total);
 }
 /**
- * binary_tree_nodes - Write a function that counts the leaves in a binary tree
+ * binary_tree_balance- Write a function that counts the leaves in a binary
  * @tree: Where tree is a pointer to the root node of the tree to count the
  * number of nodes
  * The value in the node must be passed as a parameter to this function.
