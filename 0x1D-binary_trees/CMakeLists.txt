@@ -20,5 +20,4 @@ add_executable(main
         13-binary_tree_nodes.c
         14-binary_tree_balance.c
         15-binary_tree_is_full.c
-        16-binary_tree_is_perfect.c
-        16-main.c)
+        15-main.c)
