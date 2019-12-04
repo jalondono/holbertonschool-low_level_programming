@@ -13,4 +13,7 @@ add_executable(main
         6-binary_tree_preorder.c
         7-binary_tree_inorder.c
         8-binary_tree_postorder.c
-        9-binary_tree_height.c 10-binary_tree_depth.c 10-main.c)
+        9-binary_tree_height.c
+        10-binary_tree_depth.c
+        11-binary_tree_size.c
+        12-binary_tree_leaves.c 12-main.c)
