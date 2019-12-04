@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_is_fullsearch - Write a function that counts the leaves in
+ * binary_tree_is_perfect1 - Write a function that counts the leaves in
  * @tree: Where tree is a pointer to the root node of the tree to count the
  * number of nodes
  * The value in the node must be passed as a parameter to this function.
@@ -25,7 +25,7 @@ int binary_tree_is_perfect1(const binary_tree_t *tree)
 }
 
 /**
- * binary_tree_is_full - Write a function that counts the leaves in a binary
+ * binary_tree_is_perfect - Write a function that counts the leaves in a binary
  * @tree: Where tree is a pointer to the root node of the tree to count the
  * number of nodes
  * The value in the node must be passed as a parameter to this function.
@@ -43,11 +43,8 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	balanced = binary_tree_balance(tree);
 	lfull = binary_tree_is_perfect1(tree->left);
 	rfull = binary_tree_is_perfect1(tree->right);
-
-
 	if (!tree->left && !tree->right)
 		return (1);
-
 	if (lfull == 1 && rfull == 1 && balanced == 0)
 		return (1);
 	else
