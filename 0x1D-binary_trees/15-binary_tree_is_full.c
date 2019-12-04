@@ -14,7 +14,10 @@ int binary_tree_is_fullsearch(const binary_tree_t *tree)
 	if (!tree)
 		return (0);
 
-	if ((tree->left && tree->right) || (!tree->left && !tree->right))
+	if (!tree->left && !tree->right)
+		return (1);
+
+	if ((tree->left && tree->right))
 	{
 		binary_tree_is_fullsearch(tree->left);
 		binary_tree_is_fullsearch(tree->right);
@@ -22,7 +25,6 @@ int binary_tree_is_fullsearch(const binary_tree_t *tree)
 	}
 	else
 		return (0);
-
 }
 
 /**
