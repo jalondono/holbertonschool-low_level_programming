@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
 project(binary_tree C)
 
-set(CMAKE_C_FLAGS "-g -ggdb -Wall -Werror -Wextra -pedantic")
+set(CMAKE_C_FLAGS "-g -ggdb -std=c90 -Wall -Werror -Wextra -pedantic")
 
 add_executable(main
         0-binary_tree_node.c binary_tree_print.c
