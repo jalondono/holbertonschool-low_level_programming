@@ -1,6 +1,3 @@
-//
-// Created by jalondono on 2/12/19.
-//
 #ifndef BINARY_TREES_H_
 #define BINARY_TREES_H_
 
@@ -28,11 +25,12 @@
  */
 struct binary_tree_s
 {
-    int n;
-    struct binary_tree_s *parent;
-    struct binary_tree_s *left;
-    struct binary_tree_s *right;
-};typedef struct binary_tree_s binary_tree_t;
+	int n;
+	struct binary_tree_s *parent;
+	struct binary_tree_s *left;
+	struct binary_tree_s *right;
+};
+typedef struct binary_tree_s binary_tree_t;
 
 /*
  * Print trees Function
@@ -59,4 +57,5 @@ int binary_tree_is_full(const binary_tree_t *tree);
 int binary_tree_is_perfect(const binary_tree_t *tree);
 binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
-#endif //BINARY_TREE_BINARY_TREES_H
+#endif
+
