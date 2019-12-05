@@ -26,7 +26,7 @@ int binary_tree_is_full1(const binary_tree_t *tree)
 		return (0);
 }
 /**
- * binary_tree_height_Aux1- function that checks if a given node is a root
+ * binary_tree_height_Aux2- function that checks if a given node is a root
  * @tree: Where tree is a pointer to the root node of the tree to traverse
  * The value in the node must be passed as a parameter to this function.
  * Return: Always 1
@@ -49,7 +49,7 @@ size_t binary_tree_height_Aux2(const binary_tree_t *tree)
 		return (rightHeight + 1);
 }
 /**
- * binary_tree_height1- function that checks if a given node is a root
+ * binary_tree_height2- function that checks if a given node is a root
  * @tree: Where tree is a pointer to the root node of the tree to traverse
  * The value in the node must be passed as a parameter to this function.
  * Return: Always 1
@@ -99,7 +99,8 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 
 	if (binary_tree_is_full1(tree) && binary_tree_balance1(tree) == 0)
 	{
-		if ((binary_tree_is_perfect(tree->left) + binary_tree_is_perfect(tree->right)) % 2 == 0)
+		if ((binary_tree_is_perfect(tree->left) +
+		binary_tree_is_perfect(tree->right)) % 2 == 0)
 			return (1);
 		else
 			return (0);
