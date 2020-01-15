@@ -8,6 +8,7 @@
 #include <fcntl.h>
 #include <ctype.h>
 #include <stddef.h>
+#include <math.h>
 #define BUFFSIZE 1000
 #define DELIMITER " \t\n\r"
 #define UNUSED(var)(void)(var)
