@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * linear_search - Function that creates a binary tree node
+ * binary_search - Function that creates a binary tree node
  * @array: Array of values
  * @size: is the size of the array
  * @value: value to match
