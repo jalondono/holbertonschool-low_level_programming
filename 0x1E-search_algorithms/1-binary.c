@@ -19,12 +19,12 @@ int binary_search(int *array, size_t size, int value)
 	middle = realsize / 2;
 	end = realsize;
 
-	printf("Searching in array: ");
-	for (i = start; i < end ; ++i)
-		printf("%d, ", array[i]);
-	printf("%d\n", array[end]);
-	while (start != end)
+	while (end >= start)
 	{
+		printf("Searching in array: ");
+		for (i = start; i < end ; ++i)
+			printf("%d, ", array[i]);
+		printf("%d\n", array[end]);
 		middle = (start + end) / 2;
 		current_value = array[middle];
 		if (current_value == value)
@@ -33,10 +33,6 @@ int binary_search(int *array, size_t size, int value)
 			end = middle - 1;
 		if (value > current_value)
 			start = middle + 1;
-		printf("Searching in array: ");
-		for (i = start; i < end ; ++i)
-			printf("%d, ", array[i]);
-		printf("%d\n", array[end]);
 	}
 	return (-1);
 }
