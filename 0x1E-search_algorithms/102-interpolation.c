@@ -1,6 +1,6 @@
 #include "search_algos.h"
 /**
- * jump_search - Function that creates a binary tree node
+ * interpolation_search - Function that creates a binary tree node
  * @array: Array of values
  * @size: is the size of the array
  * @value: value to match
@@ -19,14 +19,15 @@ int interpolation_search(int *array, size_t size, int value)
 	low = 0;
 	while (high >= low)
 	{
-		pos = low + (((double)(high - low) / (array[high] - array[low])) * (value - array[low]));
-		if (pos > (unsigned)real_size)
+		pos = low + (((double)(high - low) /
+				(array[high] - array[low])) * (value - array[low]));
+		if (pos > (unsigned int)real_size)
 		{
-			printf("Value checked array[%d] is out of range\n", (unsigned)pos);
+			printf("Value checked array[%d] is out of range\n", (unsigned int)pos);
 			return (-1);
 		}
 
-		printf("Value checked array[%d] = [%d]\n", (unsigned)pos, array[pos]);
+		printf("Value checked array[%d] = [%d]\n", (unsigned int)pos, array[pos]);
 		if (array[pos] == value)
 			return (pos);
 		if (array[pos] > value)
