@@ -1,13 +1,18 @@
-Why C programming is awesome (don’t forget to tweet today, with the hashtag #cisfun :))
-Who invented C
-Who are Dennis Ritchie, Brian Kernighan and Linus Torvalds
-What happens when you type gcc main.c
-What is an entry point
-What is main
-How to print text using printf, puts and putchar
-How to get the size of a specific type using the unary operator sizeof
-How to compile using gcc
-What is the default program name when compiling with gcc
-What is the official Holberton C coding style and how to check your code with betty-style
-How to find the right header to include in your source code when using a standard library function
-How does the main function influence the return value of the program
+# 0x13. C - More singly linked lists
+---
+* How to use linked lists
+* Start to look for the right source of information without too much help
+---
+File|Task
+---|---
+0-print_listint.c | Prints all the elements of a listint_t list
+1-listint_len.c | Returns the number of elements in a linked listint_t list
+2-add_nodeint.c | Adds a new node at the beginning of a listint_t list
+3-add_nodeint_end.c | Adds a new node at the end of a listint_t list
+4-free_listint.c | Frees a listint_t list
+5-free_listint2.c | Frees a listint_t list, sets head to NULL
+6-pop_listint.c | Deletes the head node of a listint_t linked list, and returns the head nodes data
+7-get_nodeint.c | Returns the nth node of a listint_t linked list
+8-sum_listint.c | Returns the sum of all the data (n) of a listint_t linked list
+9-insert_nodeint.c | Inserts a new node at a given position
+10-delete_nodeint.c | Deletes the node at index index of a listint_t linked list
