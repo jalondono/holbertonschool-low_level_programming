@@ -1,7 +1,11 @@
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+# 0x0C. C - More malloc, free
 
-General
-What is the difference between automatic and dynamic allocation
-What is malloc and free and how to use them
-Why and when use malloc
-How to use valgrind to check for memory leak
+- How to use the exit function
+- What are the functions calloc and realloc from the standard library and how to use them
+
+| File | Task |
+|---- | ----|
+|0-malloc_checked.c |function that allocates memory using malloc |
+|1-string_nconcat.c |function that concatenates two strings |
+|2-calloc.c |function that allocates memory for an array, using malloc |
+|3-array_range.c |function that creates an array of integers |
