@@ -1,13 +1,9 @@
-Why C programming is awesome (don’t forget to tweet today, with the hashtag #cisfun :))
-Who invented C
-Who are Dennis Ritchie, Brian Kernighan and Linus Torvalds
-What happens when you type gcc main.c
-What is an entry point
-What is main
-How to print text using printf, puts and putchar
-How to get the size of a specific type using the unary operator sizeof
-How to compile using gcc
-What is the default program name when compiling with gcc
-What is the official Holberton C coding style and how to check your code with betty-style
-How to find the right header to include in your source code when using a standard library function
-How does the main function influence the return value of the program
+# 0x09. C - Static libraries
+
+- What is a static library, how does it work, how to create one, and how to use it
+- Basic usage of ar, ranlib, nm
+
+|File|Task|
+| ---|----|
+|libholberton.a |Creating a Static library with a sort of fucntions |
+|create_static_lib.sh |Creates a static library called liball.a from all the .c files that are in the current directory|
