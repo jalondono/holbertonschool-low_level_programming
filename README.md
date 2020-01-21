@@ -1,13 +1,26 @@
-Why C programming is awesome (don’t forget to tweet today, with the hashtag #cisfun :))
-Who invented C
-Who are Dennis Ritchie, Brian Kernighan and Linus Torvalds
-What happens when you type gcc main.c
-What is an entry point
-What is main
-How to print text using printf, puts and putchar
-How to get the size of a specific type using the unary operator sizeof
-How to compile using gcc
-What is the default program name when compiling with gcc
-What is the official Holberton C coding style and how to check your code with betty-style
-How to find the right header to include in your source code when using a standard library function
-How does the main function influence the return value of the program
+# Low-level programming
+
+!["Holberton Logo"](https://www.holbertonschool.com/holberton-logo-twitter-card.png)
+---
+## Everything you need to know to start with C
+---
+### while(98) printf(#cisfun\n);
+---
+A low-level programming language is a programming language that provides little or no abstraction from a computer's instruction set architecturecommands or functions in the language map closely to processor instructions. Generally this refers to either machine code or assembly language. The word "low" refers to the small or nonexistent amount of abstraction between the language and machine language; because of this, low-level languages are sometimes described as being "close to the hardware".
+### About
+At Holberton School, there are several tracks to become a full stack software engineer. One of those tracks is the low level programming track which covers the following:
+- Compilation process
+- Commenting code and following a coding style standard
+- Variables, types and logic operators
+- Functions, loops and nested loops
+- Pointers, arrays and strings
+- Recursion
+- Static and Dynamic libraries
+- Argc, argv, and memory management
+- Structures, singly and doubly linked lists
+- Bit manipulation
+- File I/O
+---
+## Requirements
+* Ubuntu 14.04 LTS
+* gcc 4.8.4 (-Wall, -Werror, -Wextra, and -pedantic flags)
