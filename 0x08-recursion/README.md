@@ -1,13 +1,17 @@
-Why C programming is awesome (don’t forget to tweet today, with the hashtag #cisfun :))
-Who invented C
-Who are Dennis Ritchie, Brian Kernighan and Linus Torvalds
-What happens when you type gcc main.c
-What is an entry point
-What is main
-How to print text using printf, puts and putchar
-How to get the size of a specific type using the unary operator sizeof
-How to compile using gcc
-What is the default program name when compiling with gcc
-What is the official Holberton C coding style and how to check your code with betty-style
-How to find the right header to include in your source code when using a standard library function
-How does the main function influence the return value of the program
+# 0x08. C - Recursion
+- What is recursion
+- How to implement recursion
+- In what situations you should implement recursion
+- In what situations you shouldnt implement recursion
+
+
+| File | Task |
+| ------ | ------ |
+| 0-puts_recursion.c | function that prints a string, followed by a new line |
+| 1-print_rev_recursion.c | function that prints a string in reverse. |
+| 2-strlen_recursion.c |  function that returns the length of a string |
+| 3-factorial.c. |function that returns the factorial of a given number  |
+| 4-pow_recursion.c | function that returns the value of x raised to the power of y |
+| 5-sqrt_recursion.c | function that returns the natural square root of a number  | 
+| 6-is_prime_number.c |  function that returns 1 if the input integer is a prime number, otherwise return 0 |
+| 7-is_palindrome.c |  function that returns 1 if a string is a palindrome and 0 if not  |
