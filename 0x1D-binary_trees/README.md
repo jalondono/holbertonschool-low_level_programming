@@ -1,13 +1,34 @@
-Why C programming is awesome (don’t forget to tweet today, with the hashtag #cisfun :))
-Who invented C
-Who are Dennis Ritchie, Brian Kernighan and Linus Torvalds
-What happens when you type gcc main.c
-What is an entry point
-What is main
-How to print text using printf, puts and putchar
-How to get the size of a specific type using the unary operator sizeof
-How to compile using gcc
-What is the default program name when compiling with gcc
-What is the official Holberton C coding style and how to check your code with betty-style
-How to find the right header to include in your source code when using a standard library function
-How does the main function influence the return value of the program
+# 0x1D. C - Binary trees
+---
+
+## Description
+This project in the Lower Level Programming series is about:
+* What is a binary tree
+* What is the difference between a binary tree and a Binary Search Tree
+* What is the possible gain in terms of time complexity compared to linked lists
+* What are the depth, the height, the size of a binary tree
+* What are the different traversal methods to go through a binary tree
+* What is a complete, a full, a perfect, a balanced binary tree
+
+---
+File|Task
+---|---
+0-binary_tree_node.c | Creates a binary tree node
+1-binary_tree_insert_left.c | Inserts a node as the left-child of another node
+2-binary_tree_insert_right.c | Inserts a node as the right-child of another node
+3-binary_tree_delete.c | Deletes an entire binary tree
+4-binary_tree_is_leaf.c | Checks if a node is a leaf
+5-binary_tree_is_root.c | Checks if a given node is a root
+6-binary_tree_preorder.c | Goes through a binary tree using pre-order traversal
+7-binary_tree_inorder.c | Goes through a binary tree using in-order traversal
+8-binary_tree_postorder.c | Goes through a binary tree using post-order traversal
+9-binary_tree_height.c | Measures the height of a binary tree
+10-binary_tree_depth.c | Measures the depth of a node in a binary tree
+11-binary_tree_size.c | Measures the size of a binary tree
+12-binary_tree_leaves.c | Counts the leaves in a binary tree
+13-binary_tree_nodes.c | Counts the nodes with at least 1 child in a binary tree
+14-binary_tree_balance.c | Measures the balance factor of a binary tree
+15-binary_tree_is_full.c | Checks if a binary tree is full
+16-binary_tree_is_perfect.c | Checks if a binary tree is perfect
+17-binary_tree_sibling.c | Finds the sibling of a node
+18-binary_tree_uncle.c | Finds the uncle of a node
