@@ -1,13 +1,17 @@
-Why C programming is awesome (don’t forget to tweet today, with the hashtag #cisfun :))
-Who invented C
-Who are Dennis Ritchie, Brian Kernighan and Linus Torvalds
-What happens when you type gcc main.c
-What is an entry point
-What is main
-How to print text using printf, puts and putchar
-How to get the size of a specific type using the unary operator sizeof
-How to compile using gcc
-What is the default program name when compiling with gcc
-What is the official Holberton C coding style and how to check your code with betty-style
-How to find the right header to include in your source code when using a standard library function
-How does the main function influence the return value of the program
+# 0x12. C - Singly linked lists
+
+---
+## Description
+
+This project in the Lower Level Programming series is about:
+* When and why using linked lists vs arrays
+* How to build and use linked lists
+
+---
+File|Task
+---|---
+0-print_list.c | Prints all the elements of a list_t list
+1-list_len.c | Returns the number of elements in a linked list_t list
+2-add_node.c | Adds a new node at the beginning of a list_t list
+3-add_node_end.c | Adds a new node at the end of a list_t list
+4-free_list.c | Frees a list_t list
