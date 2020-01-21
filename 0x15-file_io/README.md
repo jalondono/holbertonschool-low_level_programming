@@ -1,13 +1,18 @@
-Why C programming is awesome (don’t forget to tweet today, with the hashtag #cisfun :))
-Who invented C
-Who are Dennis Ritchie, Brian Kernighan and Linus Torvalds
-What happens when you type gcc main.c
-What is an entry point
-What is main
-How to print text using printf, puts and putchar
-How to get the size of a specific type using the unary operator sizeof
-How to compile using gcc
-What is the default program name when compiling with gcc
-What is the official Holberton C coding style and how to check your code with betty-style
-How to find the right header to include in your source code when using a standard library function
-How does the main function influence the return value of the program
+# 0x15. C - File I/O
+---
+* How to create, open, close, read and write files
+* What are file descriptors
+* What are the 3 standard file descriptors, what are their purpose and what are their POSIX names
+* How to use the I/O system calls open, close, read and write
+* What are and how to use the flags O_RDONLY, O_WRONLY, O_RDWR
+* What are file permissions, and how to set them when creating a file with the open system call
+* What is a system call
+* What is the difference between a function and a system call
+
+---
+File|Task
+---|---
+0-read_textfile.c | Reads a text file and prints it to the POSIX standard output
+1-create_file.c | Creates a file
+2-append_text_to_file.c | Appends a text at the end of a file
+3-cp.c | Copies the content of a file to another file
