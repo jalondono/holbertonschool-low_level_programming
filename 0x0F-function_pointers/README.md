@@ -1,13 +1,15 @@
-Why C programming is awesome (don’t forget to tweet today, with the hashtag #cisfun :))
-Who invented C
-Who are Dennis Ritchie, Brian Kernighan and Linus Torvalds
-What happens when you type gcc main.c
-What is an entry point
-What is main
-How to print text using printf, puts and putchar
-How to get the size of a specific type using the unary operator sizeof
-How to compile using gcc
-What is the default program name when compiling with gcc
-What is the official Holberton C coding style and how to check your code with betty-style
-How to find the right header to include in your source code when using a standard library function
-How does the main function influence the return value of the program
+# 0x0F. C - Function pointers
+---
+- What are function pointers and how to use them
+- What does a function pointer exactly hold
+- Where does a function pointer point to in the virtual memory
+
+|File | Task |
+|---- |----|
+|function_pointers.h | Header with prototypes of functions for tasks. |
+|0-print_name.c | Prints a name.|
+|1-array_iterator.c | Executes a function given as a parameter on each element of an array.  |
+|2-int_index.c | Searches for an integer. |
+|3-get_op_func.c | Function that selects the correct operation for the calculator programFunction that selects the correct operation for the calculator program |
+|3-op_functions.c| Functions that the calculator can use.|
+|3-calc.h | Header file with prototypes and definition of structure used in calc.|
