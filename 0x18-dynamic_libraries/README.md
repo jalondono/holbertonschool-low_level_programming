@@ -1,13 +1,20 @@
-Why C programming is awesome (don’t forget to tweet today, with the hashtag #cisfun :))
-Who invented C
-Who are Dennis Ritchie, Brian Kernighan and Linus Torvalds
-What happens when you type gcc main.c
-What is an entry point
-What is main
-How to print text using printf, puts and putchar
-How to get the size of a specific type using the unary operator sizeof
-How to compile using gcc
-What is the default program name when compiling with gcc
-What is the official Holberton C coding style and how to check your code with betty-style
-How to find the right header to include in your source code when using a standard library function
-How does the main function influence the return value of the program
+# 0x18. C - Dynamic libraries
+---
+## Description
+
+This project in the Lower Level Programming series is about:
+* What is a dynamic library, how does it work, how to create one, and how to use
+* it
+* What is the environment variable $LD_LIBRARY_PATH and how to use it
+* What are the differences between static and shared libraries
+* Usage of nm, ldd, ldconfig
+
+---
+File|Task
+---|---
+libholberton.so | A dynamic library of various C functions
+holberton.h | Header file of functions used to make a dynamic library
+1-create_dynamic_lib.sh | Creates a dynamic library called liball.so
+100-operations.so | A dynamic library that contains C files that can be called
+from Python
+100-tests.py | Prints out random math equations
